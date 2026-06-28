@@ -24,7 +24,7 @@ export function Hero() {
         playsInline
         poster="/port-aerial.png"
       >
-        <source src="/ship.mp4" type="video/mp4" />
+        <source src="/cargo-ship-bg.mp4" type="video/mp4" />
       </video>
       {/* overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/75 to-navy/40" />

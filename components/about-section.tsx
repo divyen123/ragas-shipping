@@ -21,7 +21,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20">
               <Image
-                src="/container-ship.jpg"
+                src="/tanker.jpg"
                 alt="Large container ship carrying cargo"
                 width={900}
                 height={700}

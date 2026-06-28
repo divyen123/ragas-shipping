@@ -67,7 +67,7 @@ export function TradingSection() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20">
               <Image
-                src="/bulk-carrier.png"
+                src="/lpg.jpg"
                 alt="Bulk carrier vessel loaded with steel billets and rail tracks at sea"
                 width={900}
                 height={760}
