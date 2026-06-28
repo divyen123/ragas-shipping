@@ -127,7 +127,7 @@ export function IntroLoader({ onComplete }: { onComplete: () => void }) {
 
             {/* 2. Full Color Logo Badge */}
             <motion.div
-              className="absolute inset-0 flex size-full items-center justify-center rounded-full bg-white shadow-2xl shadow-black/40 ring-4 ring-ocean/40"
+              className="absolute inset-0 flex size-full items-center justify-center rounded-full bg-white shadow-2xl shadow-black/40 ring-4 ring-ocean/40 overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{
                 scale: logoVisible ? 1 : 0.8,
@@ -145,7 +145,7 @@ export function IntroLoader({ onComplete }: { onComplete: () => void }) {
                 width={170}
                 height={170}
                 priority
-                className="size-[78%] object-contain"
+                className="size-[78%] object-contain rounded-full"
               />
             </motion.div>
           </div>

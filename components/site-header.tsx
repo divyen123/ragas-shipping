@@ -87,13 +87,13 @@ export function SiteHeader() {
           onClick={(e) => handleLinkClick(e, "#top")}
           className="flex items-center gap-3"
         >
-          <span className="flex size-11 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/20">
+          <span className="flex size-11 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/20 overflow-hidden">
             <Image
               src="/ragas-logo.jpeg"
               alt="Ragas Shipping logo"
               width={44}
               height={44}
-              className="size-[80%] object-contain"
+              className="size-[80%] object-contain rounded-full"
             />
           </span>
           <span className="hidden flex-col leading-tight sm:flex">

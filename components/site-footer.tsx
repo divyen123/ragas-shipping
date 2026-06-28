@@ -14,13 +14,13 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-5 py-12 md:px-8">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="flex items-center gap-4">
-            <span className="flex size-14 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-border">
+            <span className="flex size-14 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-border overflow-hidden">
               <Image
                 src="/ragas-logo.jpeg"
                 alt="Ragas Shipping Pte Ltd logo"
                 width={56}
                 height={56}
-                className="size-[80%] object-contain"
+                className="size-[80%] object-contain rounded-full"
               />
             </span>
             <div>
