@@ -34,7 +34,7 @@ export function ContactSection() {
         fill
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-navy/90" />
+      <div className="absolute inset-0 bg-navy/70" />
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="text-white">
