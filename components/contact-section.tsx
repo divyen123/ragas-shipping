@@ -19,8 +19,8 @@ export function ContactSection() {
       `Name: ${name}\n` +
       `Company: ${company}\n` +
       `Email: ${email}\n` +
-      `Phone: ${phone}\n\n` +
-      `Message:\n${message}`
+      `Phone: ${phone}\n` +
+      `How can we help?: ${message}`
     )
 
     window.location.href = `mailto:ragasshipping@zohomail.com?subject=${subject}&body=${body}`
