@@ -32,7 +32,7 @@ export function TradingSection() {
               <Globe2 className="size-4" /> Trading Terms & Reach
             </span>
             <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              Trading & transporting raw materials
+              Trading & transporting Energies
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
               We engage in trading of a wide portfolio of shipping assets and bulk materials, including rock boulders, sand, and aggregates. By purchasing and
