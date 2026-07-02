@@ -56,9 +56,7 @@ export function Hero() {
           variants={item}
           className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/80 md:text-lg"
         >
-          A reputed ship broking and dependable ship chartering company — connecting
-          shipowners and cargo across Asia, Europe and the Americas with integrity,
-          efficiency and transparency.
+          A reputed ship broking and dependable ship chartering company — connecting shipowners and cargo across Asia, PG, AG, Fareast with integrity, efficiency and transparency.
         </motion.p>
 
         <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row">
