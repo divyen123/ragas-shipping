@@ -82,9 +82,9 @@ export function Hero() {
           className="mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/15 pt-7"
         >
           {[
-            { k: "5+", v: "International Clients" },
-            { k: "4", v: "Insurance Coverage Types" },
-            { k: "3", v: "Continents Sourced" },
+            { k: "15+", v: "International Clients" },
+            { k: "3", v: "Insurance Coverage Types" },
+            { k: "2+", v: "Continents Sourced" },
           ].map((s) => (
             <div key={s.v}>
               <div className="font-heading text-3xl font-extrabold text-white md:text-4xl">

@@ -18,7 +18,7 @@ const points = [
   {
     icon: Boxes,
     title: "Global Sourcing Network",
-    text: "Trusted sourcing partners spanning Asia, Europe and the Americas.",
+    text: "Trusted sourcing partners spanning Asia, PG, AG, Fareast.",
   },
 ]
 
@@ -35,8 +35,7 @@ export function TradingSection() {
               Trading & transporting raw materials
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-              We engage in the trading of a wide portfolio of shipping assets and raw
-              materials, including rock boulders, sand, and aggregates. By purchasing and
+              We engage in trading of a wide portfolio of shipping assets and bulk materials, including rock boulders, sand, and aggregates. By purchasing and
               operating tugs and barges, we provide end-to-end resourcing, procurement,
               and seamless delivery of goods for our international client base.
             </p>
@@ -79,7 +78,7 @@ export function TradingSection() {
                 Routes
               </div>
               <div className="mt-1.5 font-heading text-lg font-extrabold tracking-wide">
-                Asia · Europe · Americas → India
+                Asia, PG, AG, Fareast
               </div>
             </div>
           </div>
