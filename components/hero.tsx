@@ -83,7 +83,7 @@ export function Hero() {
         >
           {[
             { k: "15+", v: "International Clients" },
-            { k: "3", v: "Insurance Coverage Types" },
+            { k: "3+", v: "Insurance Coverage Types" },
             { k: "2+", v: "Continents Sourced" },
           ].map((s) => (
             <div key={s.v}>
