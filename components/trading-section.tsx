@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Globe2, Train, Boxes, CircleDollarSign } from "lucide-react"
+import { Globe2, Zap, Boxes, CircleDollarSign } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
 const points = [
@@ -11,9 +11,9 @@ const points = [
     text: "We supply customers worldwide on FOB and CIF basis with the best competitive rates.",
   },
   {
-    icon: Train,
-    title: "Rail Tracks & Billets",
-    text: "Current focus on sourcing rail tracks and billets from various global locations into India.",
+    icon: Zap,
+    title: "Energy Solutions",
+    text: "Our commitment to excellence drives us to redefine the future of energy, providing solutions that not only meet today's demands but pave the way for a cleaner, more efficient tomorrow.",
   },
   {
     icon: Boxes,

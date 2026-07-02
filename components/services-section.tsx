@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { 
   Container, Ship, Compass, Boxes, Layers, 
-  GraduationCap, HeartHandshake, Leaf, X 
+  ClipboardCheck, HeartHandshake, Leaf, X 
 } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
@@ -78,16 +78,13 @@ const servicesList = [
     ]
   },
   {
-    id: "csr-education",
-    icon: GraduationCap,
-    title: "Education Initiatives",
-    shortText: "Empowering underserved students through scholarships and grants.",
-    description: "As part of our commitment to Corporate Social Responsibility (CSR), we invest in education initiatives to support students in underserved communities globally.",
-    details: [
-      "Partnering with schools and non-profits to establish scholarship funds.",
-      "Providing financial assistance to support students from lower-income backgrounds.",
-      "Developing educational access programs to empower future leaders."
-    ]
+    id: "survey-appraisal",
+    icon: ClipboardCheck,
+    title: "Survey & Appraisal",
+    shortText: "Certified premier independent third-party inspection and Survey company.",
+    externalLink: "https://smrsas.me",
+    description: "",
+    details: []
   },
   {
     id: "csr-relief",
@@ -151,7 +148,7 @@ export function ServicesSection() {
           {servicesList.map((s, i) => (
             <Reveal key={s.id} delay={i * 0.05} className="h-full">
               <div
-                onClick={() => setSelectedService(s)}
+                onClick={() => s.externalLink ? window.open(s.externalLink, "_blank") : setSelectedService(s)}
                 className="group h-full rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md shadow-xl flex flex-col items-center justify-between text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-ocean/40 hover:bg-white/10 origin-center cursor-pointer"
               >
                 <div className="flex flex-col items-center">
