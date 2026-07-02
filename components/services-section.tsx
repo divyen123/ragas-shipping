@@ -139,7 +139,7 @@ export function ServicesSection() {
             Our Services
           </span>
           <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold text-white md:text-4xl">
-            Complete maritime commerce solutions
+            Complete maritime solutions
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-white/70">
             From freight logistics and chartering to responsible global actions, explore our complete offerings.
