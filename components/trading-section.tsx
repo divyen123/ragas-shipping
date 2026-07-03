@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "motion/react"
 import { Globe2, Zap, Boxes, CircleDollarSign } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { TypewriterText } from "@/components/typewriter-text"
@@ -42,9 +43,38 @@ export function TradingSection() {
             </p>
           </Reveal>
 
-          <div className="mt-8 flex flex-col gap-4">
-            {points.map((p, i) => (
-              <Reveal key={p.title} delay={i * 0.1}>
+          <motion.div
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.2,
+                  delayChildren: 0.1
+                }
+              }
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+            className="mt-8 flex flex-col gap-4"
+          >
+            {points.map((p) => (
+              <motion.div
+                key={p.title}
+                variants={{
+                  hidden: { opacity: 0, x: -40, scale: 0.95 },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 15
+                    }
+                  }
+                }}
+              >
                 <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 transition-all hover:border-accent/50 hover:shadow-md">
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
                     <p.icon className="size-5" />
@@ -58,9 +88,9 @@ export function TradingSection() {
                     </p>
                   </div>
                 </div>
-              </Reveal>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <Reveal className="order-1 lg:order-2" y={40}>
