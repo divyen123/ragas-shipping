@@ -48,7 +48,7 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <p>© 2025 Ragas Shipping Pte Ltd. All rights reserved.</p>
-          <p>Established 2025 · Singapore</p>
+         
         </div>
       </div>
     </footer>

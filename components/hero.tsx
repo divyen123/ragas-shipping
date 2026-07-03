@@ -36,13 +36,7 @@ export function Hero() {
         animate="show"
         className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 pb-20 md:px-8"
       >
-        <motion.span
-          variants={item}
-          className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-white backdrop-blur-sm"
-        >
-          <Globe2 className="size-3.5 text-ocean" />
-          Established 2025 · Singapore
-        </motion.span>
+        
 
         <motion.h1
           variants={item}
