@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { 
   Container, Ship, Compass, Boxes, Layers, 
-  ClipboardCheck, HeartHandshake, Leaf, X 
+  ClipboardCheck, Droplets, Leaf, X 
 } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
@@ -87,16 +87,13 @@ const servicesList = [
     details: []
   },
   {
-    id: "csr-relief",
-    icon: HeartHandshake,
-    title: "Disaster Relief",
-    shortText: "Mobilizing urgent logistical support and vital relief cargo.",
-    description: "When natural disasters strike, Ragas Shipping mobilizes its transport network to deliver vital aid and relief supplies to affected regions quickly.",
-    details: [
-      "Immediate logistics support coordinating with global humanitarian agencies.",
-      "Fast-tracked mobilization of cargo containers carrying emergency food and medical aid.",
-      "Reducing transit delays to ensure essential goods reach disaster-stricken areas."
-    ]
+    id: "petroleum",
+    icon: Droplets,
+    title: "Petroleum",
+    shortText: "Wide range of Petroleum, LNG, LPG and Petrochem products.",
+    externalLink: "https://www.sowmiyagroup.com",
+    description: "",
+    details: []
   },
   {
     id: "csr-environment",
