@@ -44,7 +44,7 @@ export function AboutSection() {
               that has carved a prominent space in the international shipping market. With
               a rich history in shipping, the company has built a reputation in delivering
               reliable, cost-effective, and timely transportation and supply-chain
-              services across the globe. Today, we operate in more than six countries,
+              services across the globe. Today, we operate in more than seven countries,
               facilitating seamless trade and transportation solutions that connect
               continents and industries alike.
             </p>

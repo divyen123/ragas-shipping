@@ -7,8 +7,8 @@ import { Reveal } from "@/components/reveal"
 const points = [
   {
     icon: CircleDollarSign,
-    title: "FOB & CIF Supply",
-    text: "We supply customers worldwide on FOB and CIF basis with the best competitive rates.",
+    title: "CFR and CIF",
+    text: "We supply customers worldwide on CFR and CIF basis with the best competitive rates.",
   },
   {
     icon: Zap,
@@ -35,9 +35,7 @@ export function TradingSection() {
               Trading & transporting Energies
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-              We engage in trading of a wide portfolio of shipping assets and bulk materials, including rock boulders, sand, and aggregates. By purchasing and
-              operating tugs and barges, we provide end-to-end resourcing, procurement,
-              and seamless delivery of goods for our international client base.
+              Our global network team of expert brokers delivers the scale and scope clients need to succeed. We manage all tanker requirements, including spot carriage, contracts of affreightment, Voyage and Time charters for all sizes of crude and petroleum products
             </p>
           </Reveal>
 

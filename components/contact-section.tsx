@@ -43,11 +43,10 @@ export function ContactSection() {
                 Get in Touch
               </span>
               <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-                Let&apos;s chart your next voyage
+                Let&apos;s Get in touch for any Products required or Ships on Charter
               </h2>
               <p className="mt-5 max-w-md text-pretty leading-relaxed text-white/75">
-                Whether you need to charter a vessel, move bulk cargo, or secure
-                competitive FOB &amp; CIF rates, our Singapore team is ready to help.
+                Whether you need to Charter a Vessel to move LPG / LNG / Gasoil / Jet fuels / Bulk cargos on competative rates, our Singapore team is ready to assist.
               </p>
             </Reveal>
 
