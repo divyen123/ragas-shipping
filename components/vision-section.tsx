@@ -42,7 +42,7 @@ export function VisionSection() {
               Vision & Mission
             </span>
             <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-              A clear bearing toward global excellence
+              A clear bearing towards global excellence
             </h2>
           </Reveal>
 
