@@ -41,10 +41,13 @@ export function Hero() {
 
         <motion.h1
           variants={item}
-          className="mt-6 max-w-4xl text-pretty font-heading text-4xl font-extrabold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="mt-6 max-w-4xl font-heading text-4xl font-extrabold leading-[1.1] text-white sm:text-6xl lg:text-7xl"
         >
-          <TypewriterText text="Navigating Global Trade with " />
-          <TypewriterText text="Trust & Precision" className="text-ocean" delay={0.6} />
+          <TypewriterText text="Navigating Global" />
+          <br />
+          <TypewriterText text="Trade with" delay={0.4} />
+          <br />
+          <TypewriterText text="Trust & Precision" className="text-ocean" delay={0.7} />
         </motion.h1>
 
         <motion.p

@@ -42,8 +42,10 @@ export function VisionSection() {
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
               Vision & Mission
             </span>
-            <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-              <TypewriterText text="A clear bearing towards global excellence" />
+            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight md:text-4xl">
+              <TypewriterText text="A clear bearing towards" />
+              <br />
+              <TypewriterText text="global excellence" delay={0.6} />
             </h2>
           </Reveal>
 

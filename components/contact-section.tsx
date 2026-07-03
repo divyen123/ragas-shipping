@@ -43,8 +43,12 @@ export function ContactSection() {
               <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
                 Get in Touch
               </span>
-              <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-                <TypewriterText text="Let's Get in touch for any Products required or Ships on Charter" />
+              <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight md:text-4xl">
+                <TypewriterText text="Let's Get in touch for" />
+                <br />
+                <TypewriterText text="any Products required" delay={0.5} />
+                <br />
+                <TypewriterText text="or Ships on Charter" delay={1.0} />
               </h2>
               <p className="mt-5 max-w-md text-pretty leading-relaxed text-white/75">
                 Whether you need to Charter a Vessel to move LPG / LNG / Gasoil / Jet fuels / Bulk cargos on competative rates, our Singapore team is ready to assist.

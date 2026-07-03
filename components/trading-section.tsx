@@ -32,8 +32,10 @@ export function TradingSection() {
             <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
               <Globe2 className="size-4" /> Trading Terms & Reach
             </span>
-            <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              <TypewriterText text="Trading & transporting Energies" />
+            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
+              <TypewriterText text="Trading &" />
+              <br />
+              <TypewriterText text="transporting Energies" delay={0.25} />
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
               Our global network team of expert brokers delivers the scale and scope clients need to succeed. We manage all tanker requirements, including spot carriage, contracts of affreightment, Voyage and Time charters for all sizes of crude and petroleum products
