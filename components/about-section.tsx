@@ -36,8 +36,8 @@ export function AboutSection() {
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
               Why Choose Ragas Shipping
             </span>
-            <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              Renowned global shipping and logistics
+            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
+              Renowned global shipping<br />and logistics
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
               Ragas Shipping Pte Ltd is a renowned global shipping and logistics company
