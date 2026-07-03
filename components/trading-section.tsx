@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Globe2, Zap, Boxes, CircleDollarSign } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { TypewriterText } from "@/components/typewriter-text"
 
 const points = [
   {
@@ -32,7 +33,7 @@ export function TradingSection() {
               <Globe2 className="size-4" /> Trading Terms & Reach
             </span>
             <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              Trading & transporting Energies
+              <TypewriterText text="Trading & transporting Energies" />
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
               Our global network team of expert brokers delivers the scale and scope clients need to succeed. We manage all tanker requirements, including spot carriage, contracts of affreightment, Voyage and Time charters for all sizes of crude and petroleum products

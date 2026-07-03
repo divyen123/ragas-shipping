@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { ShieldCheck, Heart, Lightbulb, Leaf, Award } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { TypewriterText } from "@/components/typewriter-text"
 
 const coreValues = [
   { icon: Heart, title: "Customer Commitment", text: "We place our customers at the core of our operations, prioritizing reliability, timeliness, and superior service." },
@@ -37,7 +38,9 @@ export function AboutSection() {
               Why Choose Ragas Shipping
             </span>
             <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              Renowned global shipping<br />and logistics
+              <TypewriterText text="Renowned global shipping" />
+              <br />
+              <TypewriterText text="and logistics" delay={0.6} />
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
               Ragas Shipping Pte Ltd is a renowned global shipping and logistics company

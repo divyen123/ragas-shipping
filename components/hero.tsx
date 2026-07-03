@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { ArrowRight, Ship, Globe2 } from "lucide-react"
+import { TypewriterText } from "@/components/typewriter-text"
 
 const container = {
   hidden: {},
@@ -42,8 +43,8 @@ export function Hero() {
           variants={item}
           className="mt-6 max-w-4xl text-pretty font-heading text-4xl font-extrabold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
         >
-          Navigating Global Trade with{" "}
-          <span className="text-ocean">Trust & Precision</span>
+          <TypewriterText text="Navigating Global Trade with " />
+          <TypewriterText text="Trust & Precision" className="text-ocean" delay={0.6} />
         </motion.h1>
 
         <motion.p

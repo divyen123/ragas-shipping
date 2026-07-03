@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { MapPin, Mail, Phone, Send } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { TypewriterText } from "@/components/typewriter-text"
 
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,7 +44,7 @@ export function ContactSection() {
                 Get in Touch
               </span>
               <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-                Let&apos;s Get in touch for any Products required or Ships on Charter
+                <TypewriterText text="Let's Get in touch for any Products required or Ships on Charter" />
               </h2>
               <p className="mt-5 max-w-md text-pretty leading-relaxed text-white/75">
                 Whether you need to Charter a Vessel to move LPG / LNG / Gasoil / Jet fuels / Bulk cargos on competative rates, our Singapore team is ready to assist.

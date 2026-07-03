@@ -3,6 +3,7 @@
 import { motion } from "motion/react"
 import { Eye, Target, Leaf } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { TypewriterText } from "@/components/typewriter-text"
 
 export function VisionSection() {
   return (
@@ -42,7 +43,7 @@ export function VisionSection() {
               Vision & Mission
             </span>
             <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-              A clear bearing towards global excellence
+              <TypewriterText text="A clear bearing towards global excellence" />
             </h2>
           </Reveal>
 

@@ -7,6 +7,7 @@ import {
   ClipboardCheck, Droplets, Leaf, X 
 } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { TypewriterText } from "@/components/typewriter-text"
 
 const servicesList = [
   {
@@ -133,7 +134,7 @@ export function ServicesSection() {
             Our Services
           </span>
           <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold text-white md:text-4xl">
-            Complete maritime solutions
+            <TypewriterText text="Complete maritime solutions" />
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-white/70">
             From freight logistics and chartering to responsible global actions, explore our complete offerings.
@@ -141,9 +142,39 @@ export function ServicesSection() {
         </Reveal>
 
         {/* 4x2 Responsive Grid */}
-        <div className="mt-14 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {servicesList.map((s, i) => (
-            <Reveal key={s.id} delay={i * 0.05} className="h-full">
+        <motion.div 
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15
+              }
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-14 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {servicesList.map((s) => (
+            <motion.div
+              key={s.id}
+              variants={{
+                hidden: { opacity: 0, y: 35, scale: 0.95 },
+                show: { 
+                  opacity: 1, 
+                  y: 0, 
+                  scale: 1, 
+                  transition: { 
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15,
+                    duration: 0.6 
+                  } 
+                }
+              }}
+              className="h-full"
+            >
               <div
                 onClick={() => s.externalLink ? window.open(s.externalLink, "_blank") : setSelectedService(s)}
                 className="group h-full rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md shadow-xl flex flex-col items-center justify-between text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-ocean/40 hover:bg-white/10 origin-center cursor-pointer"
@@ -163,9 +194,9 @@ export function ServicesSection() {
                   View Details &rarr;
                 </span>
               </div>
-            </Reveal>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Details Modal Overlay */}
