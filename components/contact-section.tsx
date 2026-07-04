@@ -24,7 +24,7 @@ export function ContactSection() {
       `How can we help?: ${message}`
     )
 
-    window.location.href = `mailto:ragasshipping@zohomail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@ragasgroups.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -58,7 +58,7 @@ export function ContactSection() {
             <div className="mt-9 space-y-4">
               {[
                 { icon: MapPin, label: "Address", value: "No-1, Marne Road, #01-20, The Citron, Singapore – 208380" },
-                { icon: Mail, label: "Email", value: "ragasshipping@zohomail.com" },
+                { icon: Mail, label: "Email", value: "info@ragasgroups.com" },
               ].map((c) => (
                 <Reveal key={c.label}>
                   <div className="flex items-center gap-4">
