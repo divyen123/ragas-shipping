@@ -9,7 +9,22 @@ import {
 import { Reveal } from "@/components/reveal"
 import { TypewriterText } from "@/components/typewriter-text"
 
-const servicesList = [
+interface ServiceItem {
+  id: string
+  icon: any
+  title: string
+  shortText: string
+  externalLink?: string
+  description: string
+  details: string[]
+  footerLink?: {
+    text: string
+    linkText: string
+    url: string
+  }
+}
+
+const servicesList: ServiceItem[] = [
   {
     id: "sea-freight",
     icon: Container,
@@ -92,9 +107,18 @@ const servicesList = [
     icon: Droplets,
     title: "Petroleum",
     shortText: "Wide range of Petroleum, LNG, LPG and Petrochem products.",
-    externalLink: "https://www.sowmiyagroup.com",
-    description: "",
-    details: []
+    description: "Oil products are used as \"energy carriers\", i.e. various grades of fuel oil and gasoline. These fuels include or can be blended to give gasoline, jet fuel, diesel fuel, heating oil, and heavier fuel oils.",
+    details: [
+      "Oil is primarily shipped in bulk using pipelines, ocean tankers, railcars, and tanker trucks. The exact method chosen depends on volume, distance, and geography.",
+      "Crude Tankers: Massive vessels (like VLCCs, which can carry 2 million barrels) transport unrefined crude oil from extraction sites to refineries.",
+      "Product Tankers: Smaller ships designed to move refined products (such as gasoil, gasoline or jet fuel) to consumer markets.",
+      "Safety & Stability: International regulations mandate that these ships have double hulls to prevent leaks, and internal tanks are divided to prevent \"sloshing\" as the ship rocks."
+    ],
+    footerLink: {
+      text: "For more details, please ",
+      linkText: "click here",
+      url: "https://www.sowmiyagroup.com"
+    }
   },
   {
     id: "csr-environment",
@@ -111,7 +135,7 @@ const servicesList = [
 ]
 
 export function ServicesSection() {
-  const [selectedService, setSelectedService] = useState<typeof servicesList[0] | null>(null)
+  const [selectedService, setSelectedService] = useState<ServiceItem | null>(null)
 
   return (
     <section id="services" className="relative overflow-hidden py-20 text-white md:py-28">
@@ -238,22 +262,40 @@ export function ServicesSection() {
 
               {/* content body */}
               <div className="mt-6 space-y-4">
-                <p className="text-base leading-relaxed text-white/80">
-                  {selectedService.description}
-                </p>
-                <div className="border-t border-white/10 pt-6">
-                  <h4 className="font-heading text-sm font-semibold uppercase tracking-wider text-ocean">
-                    Key Details & Offerings
-                  </h4>
-                  <ul className="mt-4 space-y-3">
-                    {selectedService.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-white/70">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-ocean" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {selectedService.description && (
+                  <p className="text-base leading-relaxed text-white/80">
+                    {selectedService.description}
+                  </p>
+                )}
+                {selectedService.details && selectedService.details.length > 0 && (
+                  <div className="border-t border-white/10 pt-6">
+                    <h4 className="font-heading text-sm font-semibold uppercase tracking-wider text-ocean">
+                      Key Details & Offerings
+                    </h4>
+                    <ul className="mt-4 space-y-3">
+                      {selectedService.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm leading-relaxed text-white/70">
+                          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-ocean" />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {selectedService.footerLink && (
+                  <div className="border-t border-white/10 pt-6 text-sm leading-relaxed text-white/70">
+                    <span>{selectedService.footerLink.text}</span>
+                    <a
+                      href={selectedService.footerLink.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ocean hover:underline font-semibold transition-colors"
+                    >
+                      {selectedService.footerLink.linkText}
+                    </a>
+                    <span>.</span>
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
