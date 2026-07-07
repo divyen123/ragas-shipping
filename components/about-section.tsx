@@ -62,29 +62,32 @@ export function AboutSection() {
       </div>
 
       <div className="relative min-h-screen overflow-hidden py-24 md:py-32">
-        <Image
-          src="/tanker.jpg"
-          alt="Large tanker ship at sea"
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-navy/35" />
-        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/80 to-background/5" />
+        <div className="absolute inset-y-0 left-0 w-[72%]">
+          <Image
+            src="/tanker.jpg"
+            alt="Large tanker ship at sea"
+            fill
+            sizes="72vw"
+            className="object-cover object-[38%_center]"
+            priority={false}
+          />
+        </div>
+        <div className="absolute inset-0 bg-navy/25" />
+        <div className="absolute inset-y-0 right-0 w-[70%] bg-gradient-to-l from-[#06245a] via-[#08285c]/90 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-[42%] bg-gradient-to-l from-[#061b43]/95 to-[#061b43]/35" />
 
-        <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-3xl items-center px-5 md:px-8 lg:mr-10 xl:mr-16">
-          <div className="w-full">
+        <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-2xl items-center px-5 md:px-8 lg:mr-8 xl:mr-12">
+          <div className="w-full text-center">
             <Reveal once={false} y={22} duration={0.8}>
               <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
                 Our Values
               </span>
-              <h3 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
+              <h3 className="mx-auto mt-4 max-w-xl font-heading text-2xl font-extrabold leading-tight text-foreground md:text-3xl">
                 Principles that guide every transaction
               </h3>
             </Reveal>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-7 grid gap-3 text-left sm:grid-cols-2">
               {coreValues.map((v, i) => (
                 <Reveal
                   key={v.title}
@@ -92,16 +95,16 @@ export function AboutSection() {
                   duration={0.9}
                   margin="-120px"
                   once={false}
-                  y={34}
+                  y={26}
                 >
-                  <div className="group h-full rounded-2xl border border-white/10 bg-card/80 p-5 shadow-xl shadow-background/20 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-ocean/60 hover:bg-card">
-                    <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-ocean group-hover:text-accent-foreground">
-                      <v.icon className="size-5" />
+                  <div className="group h-full rounded-xl border border-white/10 bg-card/75 p-4 shadow-xl shadow-background/20 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-ocean/60 hover:bg-card">
+                    <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-ocean group-hover:text-accent-foreground">
+                      <v.icon className="size-4" />
                     </span>
-                    <h4 className="mt-4 font-heading text-lg font-bold text-foreground">
+                    <h4 className="mt-3 font-heading text-base font-bold text-foreground">
                       {v.title}
                     </h4>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground md:text-sm">
                       {v.text}
                     </p>
                   </div>
