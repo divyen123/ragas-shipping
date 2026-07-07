@@ -68,7 +68,7 @@ export function AboutSection() {
             alt="Large tanker ship at sea"
             fill
             sizes="100vw"
-            className="object-cover object-[38%_center]"
+            className="object-cover object-[30%_center]"
             priority={false}
           />
         </div>
