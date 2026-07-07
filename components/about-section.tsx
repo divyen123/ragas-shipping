@@ -72,11 +72,12 @@ export function AboutSection() {
             priority={false}
           />
         </div>
-        <div className="absolute inset-0 bg-navy/25" />
-        <div className="absolute inset-y-0 right-0 w-[70%] bg-gradient-to-l from-[#06245a] via-[#08285c]/90 to-transparent" />
-        <div className="absolute inset-y-0 right-0 w-[42%] bg-gradient-to-l from-[#061b43]/95 to-[#061b43]/35" />
+        <div className="absolute inset-0 bg-navy/20" />
+        <div className="absolute inset-y-0 right-0 w-[76%] bg-gradient-to-l from-[#02183f] via-[#063777]/90 via-55% to-transparent" />
+        <div className="absolute inset-y-0 left-[43%] w-[28%] bg-gradient-to-r from-transparent via-[#0b8ed8]/25 to-[#063777]/70 blur-2xl" />
+        <div className="absolute inset-y-0 right-0 w-[58%] bg-[radial-gradient(circle_at_22%_22%,rgba(22,163,219,0.28),transparent_34%),linear-gradient(90deg,rgba(8,62,123,0.2),rgba(2,19,54,0.96))]" />
 
-        <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-2xl items-center px-5 md:px-8 lg:mr-8 xl:mr-12">
+        <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-xl items-center px-5 md:px-8 lg:mr-8 xl:mr-14">
           <div className="w-full text-center">
             <Reveal once={false} y={22} duration={0.8}>
               <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
@@ -91,20 +92,20 @@ export function AboutSection() {
               {coreValues.map((v, i) => (
                 <Reveal
                   key={v.title}
-                  delay={0.15 + i * 0.22}
-                  duration={0.9}
+                  delay={0.12 + i * 0.18}
+                  duration={0.8}
                   margin="-120px"
                   once={false}
-                  y={26}
+                  y={22}
                 >
-                  <div className="group h-full rounded-xl border border-white/10 bg-card/75 p-4 shadow-xl shadow-background/20 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-ocean/60 hover:bg-card">
-                    <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-ocean group-hover:text-accent-foreground">
+                  <div className="group relative h-full min-h-[132px] rounded-xl border border-white/10 bg-card/75 p-4 pr-14 shadow-xl shadow-background/20 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-ocean/60 hover:bg-card">
+                    <span className="absolute right-4 top-4 flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-ocean group-hover:text-accent-foreground">
                       <v.icon className="size-4" />
                     </span>
-                    <h4 className="mt-3 font-heading text-base font-bold text-foreground">
+                    <h4 className="font-heading text-base font-bold text-foreground">
                       {v.title}
                     </h4>
-                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground md:text-sm">
+                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                       {v.text}
                     </p>
                   </div>
