@@ -1,74 +1,113 @@
 "use client"
 
 import Image from "next/image"
-import { ShieldCheck, Heart, Lightbulb, Leaf, Award } from "lucide-react"
+import { Award, Eye, Handshake, Heart, Lightbulb, ShieldCheck } from "lucide-react"
 import { Reveal } from "@/components/reveal"
-import { TypewriterText } from "@/components/typewriter-text"
 
 const coreValues = [
-  { icon: Heart, title: "Customer Commitment", text: "We place our customers at the core of our operations, prioritizing reliability, timeliness, and superior service." },
-  { icon: ShieldCheck, title: "Integrity", text: "We adhere to the highest standards of ethical behaviour, transparency, and honesty in everything we do." },
-  { icon: Lightbulb, title: "Innovation", text: "We foster a culture of continuous improvement, exploring new technologies to enhance logistics." },
-  { icon: Leaf, title: "Sustainability", text: "We are dedicated to reducing the environmental impact of our operations through sustainable practices." },
-  { icon: Award, title: "Excellence", text: "Excellence is ingrained in every aspect of our operations to deliver optimal results." },
+  { icon: ShieldCheck, title: "Integrity", text: "We conduct every transaction with honesty and accountability." },
+  { icon: Award, title: "Professionalism", text: "We maintain the highest standards of operational and commercial excellence." },
+  { icon: Heart, title: "Reliability", text: "We deliver dependable solutions that our clients can trust." },
+  { icon: Eye, title: "Transparency", text: "We promote open communication and clear commercial practices." },
+  { icon: Lightbulb, title: "Innovation", text: "We continuously adapt to evolving market demands and embrace modern business solutions." },
+  { icon: Handshake, title: "Partnership", text: "We believe long-term success is achieved through strong, mutually beneficial relationships with our clients and partners worldwide." },
+]
+
+const whoWeAreParagraphs = [
+  {
+    direction: -96,
+    text: "RAGAS Group is an international marine, energy, and commodity trading company committed to provide reliable, transparent, and efficient solutions to clients across the global maritime and energy industries.",
+  },
+  {
+    direction: 96,
+    text: "Driven by two young mariners with strong professional backgrounds in vessel operations, navigation, ship command, shipping, logistics, marine surveying, marine engineering and international commodity trading, the company combines practical seagoing knowledge with modern commercial expertise. This unique combination enables us to understand every aspect of the supply chain from cargo sourcing and quality assurance to marine logistics, vessel coordination, and successful transaction execution.",
+  },
+  {
+    direction: -96,
+    text: "Our team works closely with reputable refineries, title holders, suppliers, shipowners, logistics providers, inspection companies, financial institutions, and legal professionals to ensure that every transaction is conducted with the highest standards of integrity, compliance, and operational excellence.",
+  },
 ]
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden bg-background py-20 md:py-28">
-      <div className="bg-grid pointer-events-none absolute inset-0 opacity-50" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-2">
-        <Reveal>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy/20">
-              <Image
-                src="/tanker.jpg"
-                alt="Large container ship carrying cargo"
-                width={900}
-                height={700}
-                className="h-[420px] w-full object-cover"
-              />
-            </div>
-          </div>
-        </Reveal>
-
-        <div>
-          <Reveal>
+    <section id="about" className="relative overflow-hidden bg-background">
+      <div className="relative flex min-h-screen items-center py-24 md:py-32">
+        <div className="bg-grid pointer-events-none absolute inset-0 opacity-50" />
+        <div className="relative mx-auto max-w-5xl px-5 text-center md:px-8">
+          <Reveal once={false} y={18} duration={0.8}>
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
-              Why Choose Ragas Shipping
+              Who We Are
             </span>
-            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
-              <TypewriterText text="Renowned global shipping" />
-              <br />
-              <TypewriterText text="and logistics" delay={0.6} />
+            <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-5xl">
+              RAGAS Group
             </h2>
-            <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-              Ragas Shipping Pte Ltd is a renowned global shipping and logistics company
-              that has carved a prominent space in the international shipping market. With
-              a rich history in shipping, the company has built a reputation in delivering
-              reliable, cost-effective, and timely transportation and supply-chain
-              services across the globe. Today, we operate in more than seven countries,
-              facilitating seamless trade and transportation solutions that connect
-              continents and industries alike.
-            </p>
           </Reveal>
 
-          <div className="mt-9 grid gap-4 sm:grid-cols-2">
-            {coreValues.map((v, i) => (
-              <Reveal key={v.title} delay={i * 0.08}>
-                <div className="group h-full rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                    <v.icon className="size-5" />
-                  </span>
-                  <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
-                    {v.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                    {v.text}
-                  </p>
-                </div>
+          <div className="mx-auto mt-7 max-w-4xl space-y-5 overflow-hidden text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+            {whoWeAreParagraphs.map((paragraph, index) => (
+              <Reveal
+                key={paragraph.text}
+                delay={0.12 + index * 0.18}
+                duration={0.95}
+                margin="-120px"
+                once={false}
+                x={paragraph.direction}
+                y={0}
+              >
+                <p>{paragraph.text}</p>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative min-h-screen overflow-hidden py-24 md:py-32">
+        <Image
+          src="/tanker.jpg"
+          alt="Large tanker ship at sea"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority={false}
+        />
+        <div className="absolute inset-0 bg-navy/35" />
+        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/80 to-background/5" />
+
+        <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-3xl items-center px-5 md:px-8 lg:mr-10 xl:mr-16">
+          <div className="w-full">
+            <Reveal once={false} y={22} duration={0.8}>
+              <span className="text-sm font-semibold uppercase tracking-[0.25em] text-ocean">
+                Our Values
+              </span>
+              <h3 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-4xl">
+                Principles that guide every transaction
+              </h3>
+            </Reveal>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {coreValues.map((v, i) => (
+                <Reveal
+                  key={v.title}
+                  delay={0.15 + i * 0.22}
+                  duration={0.9}
+                  margin="-120px"
+                  once={false}
+                  y={34}
+                >
+                  <div className="group h-full rounded-2xl border border-white/10 bg-card/80 p-5 shadow-xl shadow-background/20 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-ocean/60 hover:bg-card">
+                    <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-ocean group-hover:text-accent-foreground">
+                      <v.icon className="size-5" />
+                    </span>
+                    <h4 className="mt-4 font-heading text-lg font-bold text-foreground">
+                      {v.title}
+                    </h4>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      {v.text}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>
