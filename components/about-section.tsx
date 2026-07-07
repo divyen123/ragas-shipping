@@ -72,10 +72,10 @@ export function AboutSection() {
             priority={false}
           />
         </div>
-        <div className="absolute inset-0 bg-navy/20" />
-        <div className="absolute inset-y-0 right-0 w-[76%] bg-gradient-to-l from-[#02183f] via-[#063777]/90 via-55% to-transparent" />
-        <div className="absolute inset-y-0 left-[43%] w-[28%] bg-gradient-to-r from-transparent via-[#0b8ed8]/25 to-[#063777]/70 blur-2xl" />
-        <div className="absolute inset-y-0 right-0 w-[58%] bg-[radial-gradient(circle_at_22%_22%,rgba(22,163,219,0.28),transparent_34%),linear-gradient(90deg,rgba(8,62,123,0.2),rgba(2,19,54,0.96))]" />
+        <div className="absolute inset-0 bg-navy/18" />
+        <div className="absolute inset-y-0 right-0 w-[82%] bg-[linear-gradient(90deg,transparent_0%,rgba(4,24,56,0.08)_22%,rgba(4,39,82,0.48)_52%,rgba(2,18,49,0.96)_100%)]" />
+        <div className="absolute inset-y-0 left-[35%] w-[36%] bg-[linear-gradient(90deg,transparent_0%,rgba(5,54,103,0.16)_42%,rgba(4,35,78,0.24)_62%,transparent_100%)] blur-3xl" />
+        <div className="absolute inset-y-0 right-0 w-[72%] bg-[radial-gradient(circle_at_34%_24%,rgba(7,77,132,0.16),transparent_38%),linear-gradient(90deg,transparent_0%,rgba(4,33,73,0.22)_36%,rgba(2,18,50,0.9)_100%)]" />
 
         <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-xl items-center px-5 md:px-8 lg:mr-8 xl:mr-14">
           <div className="w-full text-center">

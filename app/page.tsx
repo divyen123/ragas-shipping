@@ -20,7 +20,7 @@ export default function Page() {
       {!introDone && <IntroLoader onComplete={() => setIntroDone(true)} />}
       <SiteHeader />
       <main>
-        <Hero />
+        <Hero animateTitle={introDone} />
         <MarqueeStrip />
         <AboutSection />
         <ServicesSection />

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { ArrowRight, Ship, Globe2 } from "lucide-react"
+import { ArrowRight, Ship } from "lucide-react"
 import { TypewriterText } from "@/components/typewriter-text"
 
 const container = {
@@ -13,7 +13,11 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 }
 
-export function Hero() {
+type HeroProps = {
+  animateTitle?: boolean
+}
+
+export function Hero({ animateTitle = true }: HeroProps) {
   return (
     <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden">
       {/* video background */}
@@ -37,17 +41,19 @@ export function Hero() {
         animate="show"
         className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 pb-20 md:px-8"
       >
-        
-
         <motion.h1
           variants={item}
-          className="mt-6 max-w-4xl font-heading text-4xl font-extrabold leading-[1.1] text-white sm:text-6xl lg:text-7xl"
+          className="mt-6 min-h-[3.3em] max-w-4xl font-heading text-4xl font-extrabold leading-[1.1] text-white sm:text-6xl lg:text-7xl"
         >
-          <TypewriterText text="Navigating Global" />
-          <br />
-          <TypewriterText text="Trade with" delay={0.4} />
-          <br />
-          <TypewriterText text="Trust & Precision" className="text-ocean" delay={0.7} />
+          {animateTitle && (
+            <>
+              <TypewriterText text="Navigating Global" />
+              <br />
+              <TypewriterText text="Trade with" delay={0.4} />
+              <br />
+              <TypewriterText text="Trust & Precision" className="text-ocean" delay={0.7} />
+            </>
+          )}
         </motion.h1>
 
         <motion.p
