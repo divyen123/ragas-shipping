@@ -62,20 +62,20 @@ export function AboutSection() {
       </div>
 
       <div className="relative min-h-screen overflow-hidden py-24 md:py-32">
-        <div className="absolute inset-y-0 left-0 w-[72%]">
+        <div className="absolute inset-0">
           <Image
             src="/tanker.jpg"
             alt="Large tanker ship at sea"
             fill
-            sizes="72vw"
+            sizes="100vw"
             className="object-cover object-[38%_center]"
             priority={false}
           />
         </div>
-        <div className="absolute inset-0 bg-navy/18" />
-        <div className="absolute inset-y-0 right-0 w-[82%] bg-[linear-gradient(90deg,transparent_0%,rgba(4,24,56,0.08)_22%,rgba(4,39,82,0.48)_52%,rgba(2,18,49,0.96)_100%)]" />
-        <div className="absolute inset-y-0 left-[35%] w-[36%] bg-[linear-gradient(90deg,transparent_0%,rgba(5,54,103,0.16)_42%,rgba(4,35,78,0.24)_62%,transparent_100%)] blur-3xl" />
-        <div className="absolute inset-y-0 right-0 w-[72%] bg-[radial-gradient(circle_at_34%_24%,rgba(7,77,132,0.16),transparent_38%),linear-gradient(90deg,transparent_0%,rgba(4,33,73,0.22)_36%,rgba(2,18,50,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-navy/24" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,transparent_38%,rgba(4,19,45,0.18)_52%,rgba(2,14,39,0.72)_72%,rgba(1,11,34,0.98)_100%)]" />
+        <div className="absolute inset-y-0 left-[38%] w-[34%] bg-[linear-gradient(90deg,transparent_0%,rgba(2,15,40,0.2)_35%,rgba(2,18,49,0.38)_55%,transparent_100%)] blur-3xl" />
+        <div className="absolute inset-y-0 right-0 w-[60%] bg-[radial-gradient(circle_at_28%_24%,rgba(5,57,107,0.12),transparent_40%),linear-gradient(90deg,transparent_0%,rgba(3,25,59,0.22)_34%,rgba(1,13,39,0.92)_100%)]" />
 
         <div className="relative ml-auto flex min-h-[calc(100vh-12rem)] w-full max-w-xl items-center px-5 md:px-8 lg:mr-8 xl:mr-14">
           <div className="w-full text-center">
