@@ -70,8 +70,8 @@ export function VisionSection() {
             <div className="mt-8 grid gap-5">
               <Reveal delay={0.12}>
                 <article className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 backdrop-blur-sm transition-colors hover:border-ocean/40">
-                  <h3 className="font-heading text-xl font-bold text-white">Our Vision</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/72 md:text-base">
+                  <h3 className="font-heading text-lg font-bold text-white">Our Vision</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/72">
                     To become one of the world's most trusted marine, energy, and commodity trading companies by connecting global suppliers and buyers through innovative, transparent, and dependable commercial solutions.
                   </p>
                 </article>
@@ -79,8 +79,8 @@ export function VisionSection() {
 
               <Reveal delay={0.24}>
                 <article className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 backdrop-blur-sm transition-colors hover:border-ocean/40">
-                  <h3 className="font-heading text-xl font-bold text-white">Our Mission</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/72 md:text-base">
+                  <h3 className="font-heading text-lg font-bold text-white">Our Mission</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/72">
                     Our mission is to simplify international commodity trading by combining maritime expertise, operational excellence, and commercial innovation. We strive to deliver efficient supply-chain solutions, create lasting partnerships, and contribute to the sustainable growth of the global marine and energy industries.
                   </p>
                 </article>
@@ -112,35 +112,35 @@ export function VisionSection() {
             </h2>
           </Reveal>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <div className="mt-7 grid gap-4 lg:grid-cols-2">
             <Reveal delay={0.12} x={-48} y={0} duration={0.85}>
-              <article className="h-full rounded-2xl border border-white/10 bg-navy/70 p-6 shadow-2xl shadow-black/25 backdrop-blur-md transition-colors hover:border-ocean/40">
-                <h3 className="font-heading text-xl font-bold text-white">Our Capability</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/72 md:text-base">
+              <article className="h-full rounded-2xl border border-white/20 bg-white/[0.08] bg-gradient-to-br from-white/[0.14] via-white/[0.07] to-navy/35 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition-colors hover:border-ocean/45">
+                <h3 className="font-heading text-lg font-bold text-white">Our Capability</h3>
+                <p className="mt-2 text-sm leading-6 text-white/72">
                   Our operational knowledge and extensive industry network enable us to facilitate transactions across major international trading hubs, including the Middle East, Southeast Asia, Europe, and other strategic energy markets.
                 </p>
-                <p className="mt-4 font-semibold text-white/90">Our capabilities include:</p>
-                <ul className="mt-3 space-y-2 pl-5 text-sm leading-relaxed text-white/72 md:text-base">
+                <p className="mt-3 text-sm font-semibold text-white/90">Our capabilities include:</p>
+                <ul className="mt-2 space-y-1.5 pl-5 text-sm leading-6 text-white/72">
                   {capabilityItems.map((item) => (
                     <li key={item} className="list-disc marker:text-ocean">
                       {item}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-sm leading-relaxed text-white/72 md:text-base">
+                <p className="mt-3 text-sm leading-6 text-white/72">
                   Every transaction is handled with careful attention to operational efficiency, commercial transparency, regulatory compliance, and risk management.
                 </p>
               </article>
             </Reveal>
 
             <Reveal delay={0.32} x={48} y={0} duration={0.85}>
-              <article className="h-full rounded-2xl border border-white/10 bg-navy/70 p-6 shadow-2xl shadow-black/25 backdrop-blur-md transition-colors hover:border-ocean/40">
-                <h3 className="font-heading text-xl font-bold text-white">Our Commitment</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/72 md:text-base">
+              <article className="h-full rounded-2xl border border-white/20 bg-white/[0.08] bg-gradient-to-br from-white/[0.14] via-white/[0.07] to-navy/35 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition-colors hover:border-ocean/45">
+                <h3 className="font-heading text-lg font-bold text-white">Our Commitment</h3>
+                <p className="mt-2 text-sm leading-6 text-white/72">
                   At RAGAS Group, we believe that successful business is built on trust, professionalism, and long-term relationships.
                 </p>
-                <p className="mt-4 font-semibold text-white/90">We are committed to:</p>
-                <ul className="mt-3 space-y-2 pl-5 text-sm leading-relaxed text-white/72 md:text-base">
+                <p className="mt-3 text-sm font-semibold text-white/90">We are committed to:</p>
+                <ul className="mt-2 space-y-1.5 pl-5 text-sm leading-6 text-white/72">
                   {commitmentItems.map((item) => (
                     <li key={item} className="list-disc marker:text-ocean">
                       {item}
