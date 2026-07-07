@@ -66,7 +66,7 @@ export function VisionSection() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <div className="mt-7 max-h-[62vh] overflow-y-auto rounded-2xl border border-white/10 bg-white/5 p-5 pr-4 shadow-2xl shadow-black/20 backdrop-blur-sm md:max-h-[68vh] md:p-6">
+            <div className="vision-scroll mt-7 max-h-[62vh] overflow-y-auto rounded-2xl border border-white/10 bg-white/5 p-5 pr-4 shadow-2xl shadow-black/20 backdrop-blur-sm md:max-h-[68vh] md:p-6">
               <div className="space-y-7 text-sm leading-relaxed text-white/72 md:text-base">
                 <section>
                   <h3 className="font-heading text-xl font-bold text-white">Our Capability</h3>
