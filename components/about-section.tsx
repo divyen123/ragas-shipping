@@ -16,7 +16,7 @@ const coreValues = [
 const whoWeAreParagraphs = [
   {
     direction: -96,
-    text: "RAGAS Group is an international marine, energy, and commodity trading company committed to provide reliable, transparent, and efficient solutions to clients across the global maritime and energy industries.",
+    text: "RAGAS Shipping is an international marine, energy, and commodity trading company committed to provide reliable, transparent, and efficient solutions to clients across the global maritime and energy industries.",
   },
   {
     direction: 96,
@@ -39,7 +39,7 @@ export function AboutSection() {
               Who We Are
             </span>
             <h2 className="mt-4 font-heading text-3xl font-extrabold leading-tight text-foreground md:text-5xl">
-              RAGAS Group
+              RAGAS Shipping
             </h2>
           </Reveal>
 
