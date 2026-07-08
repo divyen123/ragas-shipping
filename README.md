@@ -50,7 +50,21 @@ Live Site: [https://shipping.ragasgroups.com/](https://shipping.ragasgroups.com/
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment & CI/CD Pipeline
 
-The platform is integrated with **Vercel** via GitHub webhook automation. Pushing changes directly to the `main` branch triggers an automatic production build and deployment to:
-[https://shipping.ragasgroups.com/](https://shipping.ragasgroups.com/)
+The platform utilizes a modern, automated Continuous Integration and Continuous Deployment (CI/CD) pipeline powered by **Vercel** and connected directly to the project's GitHub repository.
+
+### How the Pipeline Works:
+1. **GitHub Integration**: The repository's primary branch (`main`) is monitored by Vercel webhooks.
+2. **Automated Trigger**: Any new code changes pushed to the `main` branch immediately trigger an isolated containerized build process in the cloud.
+3. **Production Optimization**: 
+   - **Static Page Generation**: Pages are pre-rendered into highly optimized static HTML, CSS, and JS during the build phase.
+   - **Compiling**: The application uses Turbo-compiling to minimize bundle size, bundle code components, compress CSS layout variables, and optimize asset paths.
+   - **Validation**: Next.js and TypeScript configurations are strictly verified to ensure zero build errors before going live.
+4. **Instant Edge Propagation**: Once compile checks pass, Vercel deploys the build artifacts onto their global Edge Network for fast page loads worldwide.
+
+### Live Environment:
+* **Production URL**: [https://shipping.ragasgroups.com/](https://shipping.ragasgroups.com/)
+* **Custom Domain Management**: The custom DNS records are pointed directly to Vercel's global router, handling SSL certificate renewals automatically.
+
+Any updates made to this codebase will reflect live automatically within minutes of pushing.
