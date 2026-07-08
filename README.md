@@ -50,46 +50,6 @@ Live Site: [https://shipping.ragasgroups.com/](https://shipping.ragasgroups.com/
 
 ---
 
-## 💻 Getting Started
-
-### Prerequisites
-
-Make sure you have [Node.js](https://nodejs.org/) (v18+) and [pnpm](https://pnpm.io/) installed.
-
-### Installation
-
-Clone the repository and install the dependencies:
-
-```bash
-# Navigate to the project root
-cd ragas-shipping
-
-# Install dependencies
-pnpm install
-```
-
-### Running Locally
-
-To run the development server:
-
-```bash
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the live hot-reloaded development environment.
-
-### Production Build
-
-To compile a highly optimized production build of the static application:
-
-```bash
-pnpm build
-```
-
-The output build will be compiled into the `.next` directory and validated for zero TypeScript or styling errors.
-
----
-
 ## 🌐 Deployment
 
 The platform is integrated with **Vercel** via GitHub webhook automation. Pushing changes directly to the `main` branch triggers an automatic production build and deployment to:
