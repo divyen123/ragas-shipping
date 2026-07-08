@@ -114,7 +114,7 @@ export function VisionSection() {
 
           <div className="mt-7 grid gap-4 lg:grid-cols-2">
             <Reveal delay={0.12} x={-48} y={0} duration={0.85}>
-              <article className="h-full rounded-2xl border border-white/20 bg-white/[0.08] bg-gradient-to-br from-white/[0.14] via-white/[0.07] to-navy/35 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition-colors hover:border-ocean/45">
+              <article className="h-full rounded-2xl border border-white/25 bg-white/[0.05] bg-gradient-to-br from-white/[0.12] via-white/[0.05] to-navy/20 p-5 shadow-2xl shadow-black/25 backdrop-blur-2xl ring-1 ring-white/10 transition-colors hover:border-ocean/45 hover:bg-white/[0.08]">
                 <h3 className="font-heading text-lg font-bold text-white">Our Capability</h3>
                 <p className="mt-2 text-sm leading-6 text-white/72">
                   Our operational knowledge and extensive industry network enable us to facilitate transactions across major international trading hubs, including the Middle East, Southeast Asia, Europe, and other strategic energy markets.
@@ -134,7 +134,7 @@ export function VisionSection() {
             </Reveal>
 
             <Reveal delay={0.32} x={48} y={0} duration={0.85}>
-              <article className="h-full rounded-2xl border border-white/20 bg-white/[0.08] bg-gradient-to-br from-white/[0.14] via-white/[0.07] to-navy/35 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition-colors hover:border-ocean/45">
+              <article className="h-full rounded-2xl border border-white/25 bg-white/[0.05] bg-gradient-to-br from-white/[0.12] via-white/[0.05] to-navy/20 p-5 shadow-2xl shadow-black/25 backdrop-blur-2xl ring-1 ring-white/10 transition-colors hover:border-ocean/45 hover:bg-white/[0.08]">
                 <h3 className="font-heading text-lg font-bold text-white">Our Commitment</h3>
                 <p className="mt-2 text-sm leading-6 text-white/72">
                   At RAGAS Group, we believe that successful business is built on trust, professionalism, and long-term relationships.
