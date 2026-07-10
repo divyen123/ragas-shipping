@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 
 type EnquiryPayload = {
   name?: string
@@ -30,40 +30,29 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please fill in all enquiry fields." }, { status: 400 })
   }
 
-  const smtpHost = process.env.SMTP_HOST
-  const smtpPort = Number(process.env.SMTP_PORT || 587)
-  const smtpUser = process.env.SMTP_USER
-  const smtpPass = process.env.SMTP_PASS
-  const smtpFrom = process.env.SMTP_FROM || smtpUser
+  const apiKey = process.env.RESEND_API_KEY
+  const from = process.env.RESEND_FROM_EMAIL || "Ragas Shipping <onboarding@resend.dev>"
 
-  if (!smtpHost || !smtpUser || !smtpPass || !smtpFrom) {
+  if (!apiKey) {
     return NextResponse.json({ error: "Email service is not configured yet." }, { status: 500 })
   }
 
-  const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: smtpPort,
-    secure: smtpPort === 465,
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
+  const resend = new Resend(apiKey)
+
+  const { error } = await resend.emails.send({
+    from,
+    to: recipient,
+    replyTo: email,
+    subject: `Ragas Shipping Enquiry from ${name}`,
+    text:
+      `Name: ${name}\n` +
+      `Company: ${company}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `How can we help?: ${message}`,
   })
 
-  try {
-    await transporter.sendMail({
-      from: smtpFrom,
-      to: recipient,
-      replyTo: email,
-      subject: `Ragas Shipping Enquiry from ${name}`,
-      text:
-        `Name: ${name}\n` +
-        `Company: ${company}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n` +
-        `How can we help?: ${message}`,
-    })
-  } catch {
+  if (error) {
     return NextResponse.json({ error: "Unable to send enquiry right now." }, { status: 502 })
   }
 
