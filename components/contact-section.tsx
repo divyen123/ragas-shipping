@@ -1,30 +1,49 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
-import { MapPin, Mail, Phone, Send } from "lucide-react"
+import { CheckCircle2, MapPin, Mail, Send } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { TypewriterText } from "@/components/typewriter-text"
 
 export function ContactSection() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
+  const [statusMessage, setStatusMessage] = useState("")
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const name = formData.get("name") as string
     const company = formData.get("company") as string
     const email = formData.get("email") as string
     const phone = formData.get("phone") as string
     const message = formData.get("message") as string
 
-    const subject = encodeURIComponent(`Ragas Shipping Enquiry from ${name}`)
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-      `Company: ${company}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone}\n` +
-      `How can we help?: ${message}`
-    )
+    setStatus("sending")
+    setStatusMessage("")
 
-    window.location.href = `mailto:info@ragasgroups.com?subject=${subject}&body=${body}`
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, company, email, phone, message }),
+      })
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null)
+        throw new Error(result?.error || "Unable to send enquiry right now.")
+      }
+
+      form.reset()
+      setStatus("sent")
+      setStatusMessage("Your enquiry has been sent successfully.")
+    } catch (error) {
+      setStatus("error")
+      setStatusMessage(error instanceof Error ? error.message : "Unable to send enquiry right now.")
+    }
   }
 
   return (
@@ -57,7 +76,7 @@ export function ContactSection() {
 
             <div className="mt-9 space-y-4">
               {[
-                { icon: MapPin, label: "Address", value: "No-1, Marne Road, #01-20, The Citron, Singapore – 208380" },
+                { icon: MapPin, label: "Address", value: "No-1, Marne Road, #01-20, The Citron, Singapore - 208380" },
                 { icon: Mail, label: "Email", value: "info@ragasgroups.com" },
               ].map((c) => (
                 <Reveal key={c.label}>
@@ -99,15 +118,30 @@ export function ContactSection() {
                   name="message"
                   rows={4}
                   placeholder="Tell us about your cargo or chartering needs..."
+                  required
                   className="mt-1.5 w-full resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/45 focus:border-ocean focus:ring-2 focus:ring-ocean/30"
                 />
               </div>
+              {statusMessage && (
+                <div
+                  className={`mt-4 flex items-center gap-2 rounded-xl border px-4 py-3 text-sm font-medium ${
+                    status === "sent"
+                      ? "border-emerald-300/30 bg-emerald-400/10 text-emerald-100"
+                      : "border-red-300/30 bg-red-400/10 text-red-100"
+                  }`}
+                  role="status"
+                >
+                  {status === "sent" && <CheckCircle2 className="size-4 shrink-0" />}
+                  {statusMessage}
+                </div>
+              )}
               <button
                 type="submit"
-                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ocean px-6 py-3.5 text-sm font-semibold text-navy transition-transform hover:scale-[1.02]"
+                disabled={status === "sending"}
+                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ocean px-6 py-3.5 text-sm font-semibold text-navy transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
               >
                 <Send className="size-4" />
-                Send Enquiry
+                {status === "sending" ? "Sending..." : "Send Enquiry"}
               </button>
             </form>
           </Reveal>
@@ -138,6 +172,7 @@ function Field({
         name={id}
         type={type}
         placeholder={placeholder}
+        required
         className="mt-1.5 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-white/45 focus:border-ocean focus:ring-2 focus:ring-ocean/30"
       />
     </div>
