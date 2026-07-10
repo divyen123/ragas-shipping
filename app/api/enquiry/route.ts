@@ -53,7 +53,11 @@ export async function POST(request: Request) {
   })
 
   if (error) {
-    return NextResponse.json({ error: "Unable to send enquiry right now." }, { status: 502 })
+    console.error("Resend enquiry failed", error)
+    return NextResponse.json(
+      { error: error.message || "Unable to send enquiry right now." },
+      { status: 502 }
+    )
   }
 
   return NextResponse.json({ ok: true })
